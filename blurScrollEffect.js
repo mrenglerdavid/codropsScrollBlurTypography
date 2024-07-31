@@ -22,7 +22,7 @@ class BlurScrollEffect {
   scroll() {
     const chars = this.splitter.getChars(); // Get characters for individual character animation
     gsap.fromTo(chars, {
-      filter: 'blur(10px) brightness(30%)',
+      filter: 'blur(10px) brightness(0%)',
       willChange: 'filter',
     }, {
       filter: 'blur(0px) brightness(100%)',
