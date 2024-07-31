@@ -1,6 +1,4 @@
-import { TextSplitter } from '../textSplitter.js';
-
-export class BlurScrollEffect {
+class BlurScrollEffect {
   constructor(textElement) {
     if (!textElement || !(textElement instanceof HTMLElement)) {
       throw new Error('Invalid text element provided.');
@@ -20,13 +18,13 @@ export class BlurScrollEffect {
   }
 
   scroll() {
-    const chars = this.splitter.getChars(); // Get chars for individual character animation
+    const chars = this.splitter.getChars();
     gsap.fromTo(chars, {
       filter: 'blur(10px) brightness(30%)',
       willChange: 'filter',
     }, {
       filter: 'blur(0px) brightness(100%)',
-      stagger: 0.05, // Adjust the stagger for characters
+      stagger: 0.05,
       scrollTrigger: {
         trigger: this.textElement,
         start: 'top bottom-=15%',
