@@ -1,3 +1,5 @@
+import { TextSplitter } from './textSplitter.js';
+
 class BlurScrollEffect {
   constructor(textElement) {
     if (!textElement || !(textElement instanceof HTMLElement)) {
