@@ -1,36 +1,10 @@
 .blur-text {
-	width: 70vw;
-	max-width: 1000px;
-	min-width: 300px;
-	line-height: 1.2;
-	font-family: "instrument-sans-variable", sans-serif;
-	font-size: clamp(1.5rem, 5vw, 3rem);
-	opacity: 0;
-	filter: blur(10px);
-	transition: opacity 1s ease-out, filter 1s ease-out;
+  opacity: 0;
+  filter: blur(10px);
+  transition: opacity 1s ease-out, filter 1s ease-out;
 }
 
 .blur-text.reveal {
-	opacity: 1;
-	filter: blur(0);
-}
-
-.blur-text--1 {
-	font-variation-settings: "wght" 420, "wdth" 100;
-	letter-spacing: -0.05em;
-}
-
-.blur-text--2 {
-	font-family: "iki-mono-variable", sans-serif;
-	font-variation-settings: "wdth" 80, "wght" 300;
-}
-
-.blur-text--3 {
-	font-variation-settings: "wght" 600, "wdth" 100;
-	letter-spacing: -0.05em;
-}
-
-.blur-text--4 {
-	font-variation-settings: "wght" 400, "wdth" 95;
-	letter-spacing: -0.05em;
+  opacity: 1;
+  filter: blur(0);
 }
