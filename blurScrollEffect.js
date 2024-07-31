@@ -12,13 +12,13 @@ class BlurScrollEffect {
     const textResizeCallback = () => this.scroll();
     this.splitter = new TextSplitter(this.textElement, {
       resizeCallback: textResizeCallback,
-      splitTypeTypes: 'chars'
+      splitTypeTypes: 'chars' // Split by characters
     });
     this.scroll();
   }
 
   scroll() {
-    const chars = this.splitter.getChars();
+    const chars = this.splitter.getChars(); // Get characters for individual character animation
     gsap.fromTo(chars, {
       filter: 'blur(10px) brightness(30%)',
       willChange: 'filter',
@@ -35,3 +35,10 @@ class BlurScrollEffect {
     });
   }
 }
+
+// Ensure compatibility across all browsers
+window.addEventListener('DOMContentLoaded', function () {
+  document.querySelectorAll('[data-effect-2]').forEach(el => {
+    new BlurScrollEffect(el);
+  });
+});
