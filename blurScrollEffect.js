@@ -14,19 +14,19 @@ export class BlurScrollEffect {
     const textResizeCallback = () => this.scroll();
     this.splitter = new TextSplitter(this.textElement, {
       resizeCallback: textResizeCallback,
-      splitTypeTypes: 'words, chars'
+      splitTypeTypes: 'chars'
     });
     this.scroll();
   }
 
   scroll() {
-    const chars = this.splitter.getChars();
+    const chars = this.splitter.getChars(); // Get chars for individual character animation
     gsap.fromTo(chars, {
       filter: 'blur(10px) brightness(30%)',
-      willChange: 'filter'
+      willChange: 'filter',
     }, {
       filter: 'blur(0px) brightness(100%)',
-      stagger: 0.05,
+      stagger: 0.05, // Adjust the stagger for characters
       scrollTrigger: {
         trigger: this.textElement,
         start: 'top bottom-=15%',
