@@ -23,7 +23,7 @@ export class BlurScrollEffect {
     // Split text for animation and store the reference.
     this.splitter = new TextSplitter(this.textElement, {
       resizeCallback: textResizeCallback,
-      splitType: 'words, chars' // Fixed splitType parameter
+      splitTypeTypes: 'words, chars'
     });
     
     // Trigger the initial scroll effect.
@@ -38,16 +38,15 @@ export class BlurScrollEffect {
       filter: 'blur(10px) brightness(0%)',
       willChange: 'filter'
     }, {
-      ease: 'none', // Animation easing.
-      filter: 'blur(0px) brightness(100%)',
-      stagger: 0.05, // Delay between starting animations for each character.
-      scrollTrigger: {
-        trigger: this.textElement, // Element that triggers the animation.
-        start: 'top bottom-=15%', // Animation starts when element hits bottom of viewport.
-        end: 'bottom center+=15%', // Animation ends in the center of the viewport.
-        scrub: 0.1, // Faster animation scrub.
-      },
-      duration: 0.5 // Faster animation duration.
+        ease: 'none', // Animation easing.
+        filter: 'blur(0px) brightness(100%)',
+        stagger: 0.05, // Delay between starting animations for each character.
+        scrollTrigger: {
+          trigger: this.textElement, // Element that triggers the animation.
+          start: 'top bottom-=15%', // Animation starts when element hits bottom of viewport.
+          end: 'bottom center+=15%', // Animation ends in the center of the viewport.
+          scrub: true, // Animation progress tied to scroll position.
+        },
     });
   }
 }
