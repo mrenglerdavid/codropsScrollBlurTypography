@@ -1,4 +1,4 @@
-import { BlurScrollEffect as BlurScrollEffect1 } from './blurScrollEffect.js';
+import { BlurScrollEffect as BlurScrollEffect1 } from 'https://cdn.jsdelivr.net/gh/mrenglerdavid/codropsScrollBlurTypography@cb69fbf/blurScrollEffect.js';
 import { preloadFonts } from './utils.js';
 
 gsap.registerPlugin(ScrollTrigger);
