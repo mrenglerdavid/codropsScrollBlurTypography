@@ -1,24 +1,24 @@
 import { BlurScrollEffect as BlurScrollEffect1 } from './blurScrollEffect.js';
 import { preloadFonts } from './utils.js';
 
-// Registers the ScrollTrigger plugin with GSAP
 gsap.registerPlugin(ScrollTrigger);
 
 const init = () => {
+  console.log("Init function called"); // Log to verify init is called
   const effects = [
     { selector: '[data-effect-1]', effect: BlurScrollEffect1 }
   ];
 
-  // Iterate over each effect configuration and apply the effect to all matching elements
   effects.forEach(({ selector, effect }) => {
     document.querySelectorAll(selector).forEach(el => {
+      console.log("Applying effect to element:", el); // Log each element the effect is applied to
       new effect(el);
     });
   });
 };
 
-// Preload images and fonts and remove loader
 preloadFonts('lnu1fpi').then(() => {
+  console.log("Fonts loaded"); // Log to verify fonts are loaded
   document.body.classList.remove('loading');
   init();
 });
