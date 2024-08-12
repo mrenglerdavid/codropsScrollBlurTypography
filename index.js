@@ -6,10 +6,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 const init = () => {
   const effects = [
-    { selector: '[data-effect-1]', effect: BlurScrollEffect1 },
-    { selector: '[data-effect-2]', effect: BlurScrollEffect2 },
-    { selector: '[data-effect-3]', effect: BlurScrollEffect3 },
-    { selector: '[data-effect-4]', effect: BlurScrollEffect4 },
+    { selector: '[data-effect-1]', effect: BlurScrollEffect1 }
   ];
 
   // Iterate over each effect configuration and apply the effect to all matching elements
