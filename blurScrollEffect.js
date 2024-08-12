@@ -40,7 +40,7 @@ class BlurScrollEffect {
 
 // Ensure compatibility across all browsers
 window.addEventListener('DOMContentLoaded', function () {
-  document.querySelectorAll('[data-effect-2]').forEach(el => {
+  document.querySelectorAll('[data-effect-1]').forEach(el => {
     new BlurScrollEffect(el);
   });
 });
