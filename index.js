@@ -1,7 +1,4 @@
-import { BlurScrollEffect as BlurScrollEffect1 } from './effect-1/blurScrollEffect.js';
-import { BlurScrollEffect as BlurScrollEffect2 } from './effect-2/blurScrollEffect.js';
-import { BlurScrollEffect as BlurScrollEffect3 } from './effect-3/blurScrollEffect.js';
-import { BlurScrollEffect as BlurScrollEffect4 } from './effect-4/blurScrollEffect.js';
+import { BlurScrollEffect as BlurScrollEffect1 } from './blurScrollEffect.js';
 import { preloadFonts } from './utils.js';
 
 // Registers the ScrollTrigger plugin with GSAP
