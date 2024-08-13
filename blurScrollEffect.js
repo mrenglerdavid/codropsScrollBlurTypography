@@ -35,7 +35,7 @@ export class BlurScrollEffect {
     // Query all individual characters in the line for animation.
     const chars = this.splitter.getChars();
     gsap.fromTo(chars, {
-      filter: 'blur(10px) brightness(0%)',
+      filter: 'blur(10px) brightness(50%)',
       willChange: 'filter'
     }, {
         ease: 'none', // Animation easing.
