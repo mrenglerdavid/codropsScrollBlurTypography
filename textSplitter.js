@@ -35,12 +35,12 @@ export class BlurScrollEffect {
     // Query all individual characters in the line for animation.
     const chars = this.splitter.getChars();
     gsap.fromTo(chars, {
-      filter: 'blur(10px) brightness(0%)',
+      filter: 'blur(10px) brightness(70%)',
       willChange: 'filter'
     }, {
         ease: 'none', // Animation easing.
         filter: 'blur(0px) brightness(100%)',
-        stagger: 0.05, // Delay between starting animations for each character.
+        stagger: 0.02, // Delay between starting animations for each character.
         scrollTrigger: {
           trigger: this.textElement, // Element that triggers the animation.
           start: 'top bottom-=15%', // Animation starts when element hits bottom of viewport.
