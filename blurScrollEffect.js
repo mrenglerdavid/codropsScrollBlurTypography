@@ -40,7 +40,7 @@ export class BlurScrollEffect {
     }, {
         ease: 'none', // Animation easing.
         filter: 'blur(0px) brightness(100%)',
-        stagger: 0.05, // Delay between starting animations for each character.
+        stagger: 0.02, // Delay between starting animations for each character.
         scrollTrigger: {
           trigger: this.textElement, // Element that triggers the animation.
           start: 'top bottom-=15%', // Animation starts when element hits bottom of viewport.
